@@ -47,8 +47,9 @@ fun main(args: Array<String>) {
 
 inline fun <T> cost(tag: String = "", crossinline block: () -> T): T {
     val start = System.nanoTime()
-    val t=block()
+//    val t=block()//这句代码
     println("$tag:${System.nanoTime() - start}")
-    return t
+//    return t
+    return block()
 
 }
